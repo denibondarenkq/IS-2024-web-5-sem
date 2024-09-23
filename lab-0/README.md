@@ -2,6 +2,10 @@
 
 This is a humorous and fictional VK Mini App designed to let users share an interactive story featuring a "Wanted by the FBI" banner with a random photo and name. The user can create and post the story to their VK profile, adding an element of playful mystery to their social media presence.
 
+## Disclaimer
+
+This project is a joke application and is not related to any official government agency or action. The “wanted” individuals and their details are randomly generated, and the images are sourced from public photo stocks. This app has no real connection to law enforcement or the FBI. It is intended purely for entertainment and to create fictional, playful stories for users to share with their friends.
+
 ## Project Description
 
 The project features an editor where users can generate a VK story with the following elements:
