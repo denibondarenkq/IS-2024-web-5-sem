@@ -1,4 +1,8 @@
 exclude:
   - node_modules
-  - README.md
   - lab-0/node_modules
+  - lab-0/node_modules/*
+  - README.md
+  - package.json
+  - package-lock.json
+  - yarn.lock
