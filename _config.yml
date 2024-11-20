@@ -1,0 +1,4 @@
+exclude:
+  - node_modules
+  - README.md
+  - lab-0/node_modules
