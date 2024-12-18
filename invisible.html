@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="scripts/page-load-time.js" defer></script>
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/invisible-comments.js" defer></script>
 </head>
 <body>
 <header class="header">
@@ -22,11 +23,18 @@
             <li class="header__menu-item"><a href="telepathic.html" class="header__link">Телепатия</a></li>
             <li class="header__menu-item"><a href="self-updating.html" class="header__link">Самообновление</a></li>
             <li class="header__menu-item"><a href="future.html" class="header__link">Ай-Тии Революция</a></li>
+            <li class="header__menu-item"><a href="constructor.html" class="header__link">Конструктор Таблиц</a></li>
         </ul>
     </nav>
 </header>
 
 <main class="main">
+    <section class="invisible-comments">
+        <h3 class="invisible-comments__title">Невидимые комментарии</h3>
+        <div class="preloader" id="commentsPreloader">Загрузка...</div>
+        <div class="comments-container" id="commentsContainer">
+        </div>
+    </section>
     <section class="hero">
         <h2 class="hero__title">
             <span class="hero__title-light">Технологии</span> <span class="hero__title-bold">Невидимых страниц</span>
