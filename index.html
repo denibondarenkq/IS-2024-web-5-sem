@@ -2,14 +2,16 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="Web 6.0, будущее веба, телепатия, самообновление, невидимые страницы">
-    <meta name="description" content="Web 6.0 – сайт о новой версии интернета.">
+    <meta name="keywords" content="Web 6.0, конструктор таблиц, смешное будущее">
+    <meta name="description" content="Создайте свою собственную таблицу с забавными аспектами Web 6.0.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web 6.0 – Будущее уже здесь</title>
+    <title>Конструктор Таблиц - Web 6.0</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts/page-load-time.js" defer></script>
-    <script src="scripts/menu.js" defer></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -28,44 +30,68 @@
     </nav>
 </header>
 
+
 <section class="hero">
     <h2 class="hero__title">
         <span class="hero__title-light">Привет,</span> <span class="hero__title-bold">Web 6.0!</span>
     </h2>
     <p class="hero__description">Технологии завтрашнего дня доступны уже сегодня.</p>
+    <button id="openModalBtn" class="button hero__button">Войти в Web 6.0</button>
 </section>
-    <section class="features">
-        <h3 class="features__title">Уже доступно</h3>
-        <div class="features__grid">
-            <div class="features__card">
-                <img src="assets/telepathy.jpg" alt="Телепатия" class="features__image">
-                <h3 class="features__card-title">Телепатия</h3>
-                <p class="features__card-text">Управляйте сайтами без клавиатуры и мыши.</p>
-            </div>
-            <div class="features__card">
-                <img src="assets/instant_load.jpg" alt="Мгновенная загрузка" class="features__image">
-                <h3 class="features__card-title">Мгновенная загрузка</h3>
-                <p class="features__card-text">Откроем новую страницу за Вас.</p>
-            </div>
-            <div class="features__card">
-                <img src="assets/self_update.jpg" alt="Самообновление" class="features__image">
-                <h3 class="features__card-title">Самообновление</h3>
-                <p class="features__card-text">Даже не думайте ничего нажимать, мы нажмем все за Вас.</p>
-            </div>
-        </div>
-    </section>
 
-    <section class="gallery">
-        <h3 class="gallery__title">Наши первые клиенты</h3>
-        <div class="gallery__grid">
-            <img src="assets/gallery/image1.jpg" alt="Изображение 1" class="gallery__image">
-            <img src="assets/gallery/image2.jpg" alt="Изображение 2" class="gallery__image">
-            <img src="assets/gallery/image3.jpg" alt="Изображение 3" class="gallery__image">
-            <img src="assets/gallery/image4.jpg" alt="Изображение 4" class="gallery__image">
-            <img src="assets/gallery/image5.jpg" alt="Изображение 5" class="gallery__image">
-            <img src="assets/gallery/image6.jpg" alt="Изображение 6" class="gallery__image">
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close-button">&times;</span>
+        <h2>Войти</h2>
+        <form id="loginForm">
+            <label for="username">Логин:</label>
+            <input type="text" id="username" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+</div>
+
+<section class="features">
+    <h3 class="features__title">Уже доступно</h3>
+    <div class="features__grid">
+        <div class="features__card">
+            <img src="assets/telepathy.jpg" alt="Телепатия" class="features__image">
+            <h3 class="features__card-title">Телепатия</h3>
+            <p class="features__card-text">Управляйте сайтами без клавиатуры и мыши.</p>
         </div>
-    </section>
+        <div class="features__card">
+            <img src="assets/instant_load.jpg" alt="Мгновенная загрузка" class="features__image">
+            <h3 class="features__card-title">Мгновенная загрузка</h3>
+            <p class="features__card-text">Откроем новую страницу за Вас.</p>
+        </div>
+        <div class="features__card">
+            <img src="assets/self_update.jpg" alt="Самообновление" class="features__image">
+            <h3 class="features__card-title">Самообновление</h3>
+            <p class="features__card-text">Даже не думайте ничего нажимать, мы нажмем все за Вас.</p>
+        </div>
+    </div>
+</section>
+
+<section class="gallery">
+    <h3 class="gallery__title">Галерея клиентов</h3>
+    <div class="gallery__container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/gallery/image1.jpg" alt="Клиент 1"></div>
+                <div class="swiper-slide"><img src="assets/gallery/image2.jpg" alt="Клиент 2"></div>
+                <div class="swiper-slide"><img src="assets/gallery/image3.jpg" alt="Клиент 3"></div>
+                <div class="swiper-slide"><img src="assets/gallery/image4.jpg" alt="Клиент 4"></div>
+                <div class="swiper-slide"><img src="assets/gallery/image5.jpg" alt="Клиент 5"></div>
+                <div class="swiper-slide"><img src="assets/gallery/image6.jpg" alt="Клиент 6"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
 
 <section class="ascii">
     <h3 class="ascii__title">Как это работает</h3>
@@ -130,5 +156,10 @@ function updateWebsite() {
 <footer class="footer">
     <p class="footer__text">&copy; 2024 Web 6.0 – Будущее уже здесь</p>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="scripts/gallery-slider.js"></script>
+<script src="scripts/modal-and-toaster.js"></script>
 </body>
 </html>
