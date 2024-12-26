@@ -500,6 +500,148 @@ body {
     animation: spin 1s linear infinite;
 }
 
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Стили формы */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#loginForm label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#loginForm input {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#loginForm input:focus {
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.2);
+}
+
+#loginForm button {
+    background-color: #0077cc;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginForm button:hover {
+    background-color: #005fa3;
+}
+
+/* Кнопка закрытия модального окна */
+.close-button {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+/* Галерея */
+.gallery {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.gallery__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Слайдер */
+.swiper {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    justify-items: center;
+}
+
+.gallery__image {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Навигация для Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #0077cc;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0077cc;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
